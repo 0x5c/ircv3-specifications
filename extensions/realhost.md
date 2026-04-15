@@ -23,7 +23,7 @@ The final version of the specification will use an unprefixed capability name an
 
 ## Introduction
 
-This specification introduces two new capability-gated message tags that allows servers to indicate
+This specification introduces two new capability-gated message tags that allow servers to indicate
 the real hostname and IP address of a user.
 
 ## Motivation
@@ -91,13 +91,7 @@ and from one without
 This section is non-normative.
 
 It would be possible to rewrite the hostname in the source of messages sent to clients with
-sufficiently elevated priviledges. However, such a scheme has a number of significant disadvantages, including;
-causing automated ban scripts to leak real hostnames, forcing a choice of only real hostnames or only IPs,
-and limiting network operator's visibility of user's publicly-visible hostnames.
-
-
-It would be possible to rewrite the hostname in the source of messages sent to clients with
 sufficiently elevated priviledges. However, such a scheme would break basic protocol assumptions, potentially causing
-a number of problems like automated ban scripts to leaking real hostnames.
+a number of problems like automated ban scripts leaking real hostnames.
 Rewriting the source also limits network operators from seeing more than either the real hostname, ip, or publicly-
 visible hostname of a user at once without further lookup commands.
